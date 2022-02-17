@@ -1,0 +1,74 @@
+.statistics__cards {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 250px);
+  grid-gap: 30px;
+}
+
+.card__digram {
+  background-color: $primary_bg;
+  padding: 25px;
+  border-radius: $rounded;
+}
+
+.audience__header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.audience__header--gender {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card__header {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__switcher {
+  display: flex;
+}
+
+.switcher__item-active {
+  padding-right: 15px;
+  font-family: $primary_font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: $primary_font_color;
+}
+
+.switcher__item {
+  font-family: $primary_font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: $secondary_font_color;
+}
+
+.card__digram--circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__digram--circle .card__title {
+    align-self: flex-start;
+}
+
+.chart__image {
+    margin-top: 30px;
+}
