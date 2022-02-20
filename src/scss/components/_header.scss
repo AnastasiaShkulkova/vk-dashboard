@@ -1,9 +1,10 @@
 .header {
-  background-color: #EFF3F9;
+  background-color: #eff3f9;
   display: grid;
   grid-area: header;
-    grid-template-columns: 200px 200px 1fr;
+  grid-template-columns: 200px 200px 1fr;
   border-radius: 0 $rounded 0 0;
+  padding-left: 30px;
 }
 
 .header__title {
@@ -17,43 +18,44 @@
 }
 
 .header__search-form {
-    display: flex;
-    max-height: 35px;
-    align-self: center;
-    grid-gap: 15px;
-    border: none;
+  display: flex;
+  max-height: 35px;
+  align-self: center;
+  grid-gap: 15px;
+  border: none;
 }
 
 .header__search {
-    border-radius: 50px;
-    border: 0;
+  border-radius: 50px;
+  border: 0;
+  padding: 0 10px;
 }
 
 .header__notification-btn {
-    background: none;
-    border: none;
+  background: none;
+  border: none;
 }
 
 .header__profile {
-    display: flex;
-    justify-self: end;
-    align-self: center;
-    grid-gap: 10px;
-    margin-right: 50px;
+  display: flex;
+  justify-self: end;
+  align-self: center;
+  grid-gap: 10px;
+  margin-right: 50px;
 }
 
 .header__user-name {
-    font-family: $primary_font;
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 24px;
-display: flex;
-align-items: center;
-color: $primary_font_color;
+  font-family: $primary_font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: $primary_font_color;
 }
 
 .header__dropdown-btn {
-    background: none;
-    border: none;
+  background: none;
+  border: none;
 }

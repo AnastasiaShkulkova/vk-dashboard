@@ -1,7 +1,7 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -20,15 +20,77 @@ body {
   margin: 50px auto 0;
   border-radius: $rounded;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     grid-template-columns: 1fr;
-  grid-template-rows: 80px 150px 1fr;
+    grid-template-rows: 80px 120px 1fr;
     grid-template-areas:
       "nav"
       "header"
       "main";
+
+    .nav {
+      border-radius: $rounded;
+    }
+
+    .nav__link {
+      display: none;
+    }
+
+    .burger__menu {
+      display: block;
+      justify-self: center;
+    }
+
+    .header {
+      border-radius: $rounded;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(1, 120px);
+    }
+
+    .header__search-form {
+      display: none;
+    }
+
+    .header__profile {
+      margin-right: 30px;
+    }
+
+    .header__user-name {
+      display: none;
+    }
+
+    .nav {
+      grid-template-columns: repeat(2, 50%);
+      grid-template-rows: repeat(1, 1fr);
+      justify-self: center;
+      align-items: center;
+      width: 100%;
+      .nav__toogle-theme {
+        display: none;
+        align-self: center;
+        margin-bottom: 0;
+      }
+    }
+
+    .main {
+      .info__cards {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 150px);
+      }
+
+      .statistics__cards {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 300px);
+
+        .card__digram {
+          overflow: hidden;
+
+          .audience__header {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, 30px);
+          }
+        }
+      }
+    }
   }
 }
-
-
-
