@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #FDFDFF;
+  background-color: #fdfdff;
 }
 
 .wrapper {
@@ -18,20 +18,72 @@ body {
   margin: 50px auto 0;
   border-radius: 14px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .wrapper {
     grid-template-columns: 1fr;
-    grid-template-rows: 80px 150px 1fr;
+    grid-template-rows: 80px 120px 1fr;
     grid-template-areas: "nav" "header" "main";
+  }
+  .wrapper .nav {
+    border-radius: 14px;
+  }
+  .wrapper .nav__link {
+    display: none;
+  }
+  .wrapper .burger__menu {
+    display: block;
+    justify-self: center;
+  }
+  .wrapper .header {
+    border-radius: 14px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 120px);
+  }
+  .wrapper .header__search-form {
+    display: none;
+  }
+  .wrapper .header__profile {
+    margin-right: 30px;
+  }
+  .wrapper .header__user-name {
+    display: none;
+  }
+  .wrapper .nav {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(1, 1fr);
+    justify-self: center;
+    align-items: center;
+    width: 100%;
+  }
+  .wrapper .nav .nav__toogle-theme {
+    display: none;
+    align-self: center;
+    margin-bottom: 0;
+  }
+  .wrapper .main .info__cards {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 150px);
+  }
+  .wrapper .main .statistics__cards {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 300px);
+  }
+  .wrapper .main .statistics__cards .card__digram {
+    overflow: hidden;
+  }
+  .wrapper .main .statistics__cards .card__digram .audience__header {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 30px);
   }
 }
 
 .header {
-  background-color: #EFF3F9;
+  background-color: #eff3f9;
   display: grid;
   grid-area: header;
   grid-template-columns: 200px 200px 1fr;
   border-radius: 0 14px 0 0;
+  padding-left: 30px;
 }
 
 .header__title {
@@ -40,7 +92,7 @@ body {
   font-weight: bold;
   font-size: 30px;
   line-height: 36px;
-  color: #4F4F4F;
+  color: #4f4f4f;
   align-self: center;
 }
 
@@ -55,6 +107,7 @@ body {
 .header__search {
   border-radius: 50px;
   border: 0;
+  padding: 0 10px;
 }
 
 .header__notification-btn {
@@ -78,7 +131,7 @@ body {
   line-height: 24px;
   display: flex;
   align-items: center;
-  color: #4F4F4F;
+  color: #4f4f4f;
 }
 
 .header__dropdown-btn {
@@ -88,10 +141,14 @@ body {
 
 .nav {
   background-color: #fdfdff;
-  border: 2px solid #EBEBEB;
+  border: 2px solid #ebebeb;
   display: grid;
   grid-area: nav;
   border-radius: 14px 0 0 14px;
+}
+.nav .burger__menu {
+  width: 30px;
+  height: 30px;
 }
 
 .nav__logo {
@@ -119,11 +176,12 @@ body {
   align-self: end;
   border: 1px solid black;
   border-radius: 50px;
+  cursor: pointer;
 }
 
 .main {
   padding: 20px 30px;
-  background-color: blueviolet;
+  background-color: #eff3f9;
   grid-area: main;
   border-radius: 0 0 14px 0;
   grid-gap: 35px;
@@ -138,7 +196,7 @@ body {
 
 .card {
   padding: 25px;
-  background-color: #FDFDFF;
+  background-color: #fdfdff;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto;
@@ -152,7 +210,7 @@ body {
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
-  color: #4F4F4F;
+  color: #4f4f4f;
 }
 
 .card__menu {
@@ -169,7 +227,7 @@ body {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  color: #4F4F4F;
+  color: #4f4f4f;
 }
 
 .card__statistics {
@@ -190,7 +248,7 @@ body {
 }
 
 .card__digram {
-  background-color: #FDFDFF;
+  background-color: #fdfdff;
   padding: 25px;
   border-radius: 14px;
 }
@@ -227,7 +285,7 @@ body {
   display: flex;
   align-items: center;
   text-align: right;
-  color: #4F4F4F;
+  color: #4f4f4f;
 }
 
 .switcher__item {
